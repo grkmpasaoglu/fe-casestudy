@@ -25,7 +25,7 @@ export function Sidebar({ projects }: SidebarProps) {
             initial={{ width: 260 }}
             animate={{ width: isCollapsed ? 80 : 260 }}
             transition={{ duration: 0.3, type: "spring", stiffness: 200, damping: 25 }}
-            className="relative flex h-screen flex-col border-r border-zinc-200 bg-zinc-50/50 dark:border-zinc-800 dark:bg-zinc-950/50 backdrop-blur-xl"
+            className="hidden md:flex relative h-full flex-col border-r border-zinc-200 bg-zinc-50/50 dark:border-zinc-800 dark:bg-zinc-950/50 backdrop-blur-xl"
         >
             <div className="flex items-center justify-between p-4">
                 <AnimatePresence>

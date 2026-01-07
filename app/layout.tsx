@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Sidebar } from "@/components/layout/sidebar";
+import { MobileNav } from "@/components/layout/mobile-nav";
 import { fetchProjects } from "@/lib/api";
 
 const geistSans = Geist({
@@ -30,7 +31,7 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen overflow-hidden flex bg-zinc-50 dark:bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen overflow-hidden flex flex-col md:flex-row bg-zinc-50 dark:bg-black`}
       >
         <ThemeProvider
           attribute="class"
@@ -38,8 +39,9 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <MobileNav projects={projects} />
           <Sidebar projects={projects} />
-          <main className="flex-1 h-screen overflow-auto relative">
+          <main className="flex-1 h-full overflow-auto relative">
             {children}
           </main>
         </ThemeProvider>

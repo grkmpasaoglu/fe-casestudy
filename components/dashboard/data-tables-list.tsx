@@ -52,7 +52,8 @@ export function DataTablesList({ tables }: DataTablesListProps) {
                                             </div>
                                             <div className="hidden sm:flex flex-col items-start min-w-[80px]">
                                                 <span className="uppercase tracking-wider text-[10px]">Rows</span>
-                                                <span className="mt-0.5 font-medium text-zinc-700 dark:text-zinc-300">{currentVersion.row_count.toLocaleString()}</span>
+                                                <span className="mt-0.5 font-medium text-zinc-700 dark:text-zinc-300">{currentVersion.row_count.toLocaleString("en-US")}</span>
+                                                {/* hydration error için en-us kullanıldı */}
                                             </div>
                                             <div className="hidden sm:flex flex-col items-start min-w-[80px]">
                                                 <span className="uppercase tracking-wider text-[10px]">Version</span>
