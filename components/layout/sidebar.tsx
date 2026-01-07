@@ -36,10 +36,7 @@ export function Sidebar({ projects }: SidebarProps) {
                             exit={{ opacity: 0 }}
                             className="flex items-center gap-2 font-bold text-lg"
                         >
-                            <div className="size-6 bg-zinc-900 dark:bg-white rounded-md flex items-center justify-center">
-                                <span className="text-white dark:text-zinc-900 text-xs">M</span>
-                            </div>
-                            <span>ModelFlow</span>
+                            <span>Project Overview Dashboard</span>
                         </motion.div>
                     )}
                 </AnimatePresence>

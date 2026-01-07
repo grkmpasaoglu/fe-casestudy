@@ -38,10 +38,7 @@ export function MobileNav({ projects }: MobileNavProps) {
         <div className="md:hidden border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-3 flex items-center justify-between sticky top-0 z-50">
             {/* Logo Area */}
             <div className="flex items-center gap-2 font-bold text-lg">
-                <div className="size-6 bg-zinc-900 dark:bg-white rounded-md flex items-center justify-center">
-                    <span className="text-white dark:text-zinc-900 text-xs">M</span>
-                </div>
-                <span>ModelFlow</span>
+                <span>Project Overview Dashboard</span>
             </div>
 
             {/* Hamburger Button */}
