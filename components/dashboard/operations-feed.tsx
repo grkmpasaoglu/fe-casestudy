@@ -22,7 +22,7 @@ export function OperationsFeed({ operations }: OperationsFeedProps) {
             </CardHeader>
             <CardContent className="flex-1 overflow-y-auto pr-2">
                 <div className="border-l border-zinc-200 dark:border-zinc-800 ml-4 space-y-6">
-                    {operations.map((op, index) => (
+                    {operations.length > 0 ? operations.map((op, index) => (
                         <div key={op.operation_log_id} className="relative pl-6">
                             {/* Timestamp Dot */}
                             <div className="absolute -left-[5px] top-1 h-2.5 w-2.5 rounded-full bg-zinc-200 ring-4 ring-white dark:bg-zinc-700 dark:ring-zinc-950" />
@@ -48,7 +48,11 @@ export function OperationsFeed({ operations }: OperationsFeedProps) {
                                 )}
                             </div>
                         </div>
-                    ))}
+                    )) : (
+                        <div className="flex items-center justify-center h-full">
+                            <span className="text-zinc-500">No operations found for this project</span>
+                        </div>
+                    )}
                 </div>
             </CardContent>
         </Card>
