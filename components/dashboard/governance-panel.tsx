@@ -28,23 +28,36 @@ export function GovernancePanel({ governance }: GovernancePanelProps) {
                         <CardTitle className="text-base">Compliance Status</CardTitle>
                     </div>
                 </CardHeader>
-                <CardContent className="flex flex-col items-center justify-center pb-6">
+                <CardContent
+                    className={`pb-6 ${governance.compliance_checklist
+                        ? "flex flex-col items-center justify-center"
+                        : "flex justify-start items-start"
+                        }`}
+                >
                     {governance.compliance_checklist ? (
                         <div className="flex flex-col items-center gap-4">
-                            <CircularProgress value={governance.compliance_checklist.completion_percentage} size={140} strokeWidth={12} />
+                            <CircularProgress
+                                value={governance.compliance_checklist.completion_percentage}
+                                size={140}
+                                strokeWidth={12}
+                            />
                             <div className="text-center">
-                                <h4 className="font-medium text-sm">{governance.compliance_checklist.template_name}</h4>
+                                <h4 className="font-medium text-sm">
+                                    {governance.compliance_checklist.template_name}
+                                </h4>
                                 <p className="text-xs text-zinc-500 mt-1">
-                                    {governance.compliance_checklist.completed_items}/{governance.compliance_checklist.total_items} items completed
+                                    {governance.compliance_checklist.completed_items}/
+                                    {governance.compliance_checklist.total_items} items completed
                                 </p>
                             </div>
                         </div>
                     ) : (
-                        <div className="py-8 text-center text-zinc-500">
+                        <div className="py-4 text-left text-zinc-500">
                             <p className="text-sm">No compliance checklist for this project type.</p>
                         </div>
                     )}
                 </CardContent>
+
             </Card>
 
             {/* Approvals */}

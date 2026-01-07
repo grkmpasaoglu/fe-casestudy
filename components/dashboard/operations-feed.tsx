@@ -49,7 +49,7 @@ export function OperationsFeed({ operations }: OperationsFeedProps) {
                             </div>
                         </div>
                     )) : (
-                        <div className="flex items-center justify-center h-full">
+                        <div className="flex items-start justify-start h-full ml-4">
                             <span className="text-zinc-500">No operations found for this project</span>
                         </div>
                     )}
