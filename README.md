@@ -1,8 +1,8 @@
-# OneWell - Model Development Dashboard
+# Model Development Dashboard
 
 ## Project Overview
 
-**OneWell** is a comprehensive Model Development Dashboard designed to provide governance, tracking, and visualization for machine learning model development lifecycles. It offers a centralized interface for monitoring project status, managing data lineage, and tracking operational feeds.
+This platform is a comprehensive Model Development Dashboard designed to provide governance, tracking, and visualization for machine learning model development lifecycles. It offers a centralized interface for monitoring project status, managing data lineage, and tracking operational feeds.
 
 Built with performance and user experience in mind, the application leverages the latest Next.js 16 App Router features and a modern component architecture to deliver a fast, responsive, and accessible interface.
 
@@ -73,8 +73,8 @@ Follow these steps to get a local copy up and running.
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/grkmpasaoglu/onewell.git
-    cd onewell
+    git clone https://github.com/grkmpasaoglu/fe-casestudy.git
+    cd fe-casestudy
     ```
 
 2.  **Install dependencies**
