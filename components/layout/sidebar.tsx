@@ -44,7 +44,7 @@ export function Sidebar({ projects }: SidebarProps) {
                     variant="ghost"
                     size="icon"
                     onClick={() => setIsCollapsed(!isCollapsed)}
-                    className="ml-auto"
+                    className="ml-auto cursor-pointer"
                 >
                     {isCollapsed ? <ChevronsRight className="size-4" /> : <ChevronsLeft className="size-4" />}
                 </Button>
@@ -87,7 +87,7 @@ export function Sidebar({ projects }: SidebarProps) {
                 <div className="flex flex-col gap-2">
                     <Button
                         variant="ghost"
-                        className={cn("justify-start", isCollapsed && "justify-center px-0")}
+                        className={cn("justify-start cursor-pointer", isCollapsed && "justify-center px-0")}
                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                     >
                         <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

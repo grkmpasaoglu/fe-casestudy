@@ -39,7 +39,7 @@ export function MobileNav({ projects }: MobileNavProps) {
             </div>
 
             {/* Hamburger Button */}
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(true)}>
+            <Button className="cursor-pointer" variant="ghost" size="icon" onClick={() => setIsOpen(true)}>
                 <Menu className="size-5" />
             </Button>
 
@@ -68,7 +68,7 @@ export function MobileNav({ projects }: MobileNavProps) {
                             {/* Drawer Header */}
                             <div className="flex items-center justify-between p-4 border-b border-zinc-100 dark:border-zinc-900">
                                 <span className="font-semibold text-sm text-zinc-500 uppercase tracking-wider">Navigation</span>
-                                <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
+                                <Button className="cursor-pointer" variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
                                     <X className="size-5" />
                                 </Button>
                             </div>
@@ -117,7 +117,7 @@ export function MobileNav({ projects }: MobileNavProps) {
 
                                     <Button
                                         variant="outline"
-                                        className="w-full justify-start gap-2"
+                                        className="w-full justify-start gap-2 cursor-pointer"
                                         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                                     >
                                         <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

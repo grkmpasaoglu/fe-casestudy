@@ -29,7 +29,7 @@ export function DataTablesList({ tables }: DataTablesListProps) {
 
                         return (
                             <AccordionItem key={table.project_table_id} value={table.project_table_id}>
-                                <AccordionTrigger className="hover:no-underline">
+                                <AccordionTrigger className="hover:no-underline cursor-pointer">
                                     <div className="flex items-center gap-4 w-full text-left">
                                         <div className="flex items-center gap-3 min-w-[30%]">
                                             <div className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-lg">
