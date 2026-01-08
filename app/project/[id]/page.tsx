@@ -7,6 +7,22 @@ import { GovernancePanel } from "@/components/dashboard/governance-panel"
 import { LineageView } from "@/components/dashboard/lineage-view"
 import { FadeIn, FadeInStagger } from "@/components/ui/fade-in"
 
+import { Metadata } from 'next'
+
+export async function generateMetadata({
+    params
+}: {
+    params: Promise<{ id: string }>
+}): Promise<Metadata> {
+    const { id } = await params
+    const project = await fetchProjectById(id)
+
+    return {
+        title: project ? `${project.project_name} | OneWell` : "Project Not Found",
+        description: project?.objectives || "Project dashboard"
+    }
+}
+
 export default async function ProjectPage({
     params
 }: {
