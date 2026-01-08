@@ -1,4 +1,4 @@
-"use client" // Since I imported it in page.tsx but page.tsx is server component, the animation components must be client.
+"use client"
 
 import { createContext, useContext } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'

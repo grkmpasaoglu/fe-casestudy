@@ -6,15 +6,12 @@ import {
   TableLineage,
 } from "@/lib/types";
 
-// Import the JSON file directly. 
-// In a real app this would be a fetch call to an endpoint.
 import sampleData from "@/app/api-mock/sample-data.json";
 
 const DELAY_MS = 600;
 
 export async function fetchProjects(): Promise<Project[]> {
   await new Promise((resolve) => setTimeout(resolve, DELAY_MS));
-  // Cast to specific type if needed, or assume JSON matches
   return sampleData.projects as unknown as Project[];
 }
 

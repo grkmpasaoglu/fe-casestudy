@@ -19,12 +19,9 @@ export function MobileNav({ projects }: MobileNavProps) {
     const pathname = usePathname()
     const { theme, setTheme } = useTheme()
 
-    // Close sidebar when route changes
     React.useEffect(() => {
         setIsOpen(false)
     }, [pathname])
-
-    // Prevent body scroll when open
     React.useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = "hidden"

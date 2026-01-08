@@ -1,7 +1,5 @@
 "use client"
-
-import * as React from "react"
-import { Activity, GitCommit, FileCog, Database } from "lucide-react"
+import { Activity } from "lucide-react"
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Operation } from "@/lib/types"

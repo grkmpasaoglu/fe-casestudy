@@ -1,8 +1,6 @@
 "use client"
 
-import * as React from "react"
-import { Database, Table as TableIcon, GitBranch, AlertCircle } from "lucide-react"
-
+import { Database, Table as TableIcon, GitBranch } from "lucide-react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Badge } from "@/components/ui/badge"
@@ -24,7 +22,7 @@ export function DataTablesList({ tables }: DataTablesListProps) {
                     <Badge variant="secondary" className="ml-auto">{tables.length}</Badge>
                 </div>
             </CardHeader>
-            <div className="px-2"> {/* Wrapper for scrolling padding if needed */}
+            <div className="px-2">
                 <Accordion type="single" collapsible className="w-full">
                     {tables.map((table) => {
                         const currentVersion = table.versions.find(v => v.table_version_id === table.current_version_id) || table.versions[0]
@@ -53,7 +51,7 @@ export function DataTablesList({ tables }: DataTablesListProps) {
                                             <div className="hidden sm:flex flex-col items-start min-w-[80px]">
                                                 <span className="uppercase tracking-wider text-[10px]">Rows</span>
                                                 <span className="mt-0.5 font-medium text-zinc-700 dark:text-zinc-300">{currentVersion.row_count.toLocaleString("en-US")}</span>
-                                                {/* hydration error için en-us kullanıldı */}
+                                                {/* hydration error için en-us kullandım */}
                                             </div>
                                             <div className="hidden sm:flex flex-col items-start min-w-[80px]">
                                                 <span className="uppercase tracking-wider text-[10px]">Version</span>

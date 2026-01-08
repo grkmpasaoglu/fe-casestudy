@@ -1,9 +1,7 @@
 "use client"
+import { User as ShieldCheck } from "lucide-react"
 
-import * as React from "react"
-import { CheckCircle2, AlertCircle, User as UserIcon, ShieldCheck } from "lucide-react"
-
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Governance } from "@/lib/types"
@@ -19,8 +17,6 @@ export function GovernancePanel({ governance }: GovernancePanelProps) {
 
     return (
         <div className="space-y-6">
-
-            {/* Compliance / Overall Status Card */}
             <Card>
                 <CardHeader>
                     <div className="flex items-center gap-2">

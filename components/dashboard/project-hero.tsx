@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import { motion } from "framer-motion"
-import { Calendar, User as UserIcon, Building2, CheckCircle2, Circle, Clock, Lock } from "lucide-react"
+import { Building2, CheckCircle2, Circle, Clock, Lock } from "lucide-react"
 
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Project, ProjectStatus } from "@/lib/types"
 import { cn, formatDate } from "@/lib/utils"
 

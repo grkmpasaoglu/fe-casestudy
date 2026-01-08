@@ -5,7 +5,7 @@ import { DataTablesList } from "@/components/dashboard/data-tables-list"
 import { OperationsFeed } from "@/components/dashboard/operations-feed"
 import { GovernancePanel } from "@/components/dashboard/governance-panel"
 import { LineageView } from "@/components/dashboard/lineage-view"
-import { FadeIn, FadeInStagger } from "@/components/ui/fade-in" // I need to create this for the fade effect requested
+import { FadeIn, FadeInStagger } from "@/components/ui/fade-in"
 
 export default async function ProjectPage({
     params
@@ -13,8 +13,6 @@ export default async function ProjectPage({
     params: Promise<{ id: string }>
 }) {
     const { id } = await params
-
-    // Parallel Data Fetching
     const projectData = fetchProjectById(id)
     const tablesData = fetchProjectTables(id)
     const operationsData = fetchRecentOperations(id)

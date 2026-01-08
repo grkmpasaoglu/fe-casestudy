@@ -1,7 +1,6 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-
 import { Target, TrendingUp, Clock, Link as LinkIcon } from "lucide-react"
 
 export const roleColors: Record<string, string> = {
@@ -16,7 +15,7 @@ export function RoleBadge({ role }: { role: string }) {
     const Icon = () => {
         switch (role) {
             case "endog": return <Target className="size-3 mr-1" />
-            case "exog": return <TrendingUp className="size-3 mr-1" /> // "Tahmin" / Predictor
+            case "exog": return <TrendingUp className="size-3 mr-1" />
             case "time_id": return <Clock className="size-3 mr-1" />
             case "lookup": return <LinkIcon className="size-3 mr-1" />
             default: return null
